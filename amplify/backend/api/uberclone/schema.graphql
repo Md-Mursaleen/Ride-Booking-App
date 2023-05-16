@@ -1,0 +1,32 @@
+type User @model
+  @auth(rules: [{allow: public, operations: [read]},{allow: owner}]) {
+  id: ID!
+  username: String!
+  email: String!
+  orders: [Order] @hasMany(indexName: "byUser", fields: ["id"])
+}
+
+type Car @model
+  @auth(rules: [{allow: public, operations: [read]},{allow: owner}]) {
+  id: ID!
+  type: String!
+  latitude: Float
+  longitude: Float
+  heading: Float
+  orders: [Order] @hasMany(indexName: "byCar", fields: ["id"])
+}
+
+type Order @model
+  @auth(rules: [{allow: public, operations: [read]},{allow: owner}]) {
+  id: ID!
+  createdAt: ID!
+  type: String!
+  originLatitude: Float!
+  originLongitude: Float!
+  destinationLatitude: Float!
+  destinationLongitude: Float!
+  userId: ID! @index(name: "byUser")
+  user: User @hasOne(fields: ["userId"])
+  carId: ID! @index(name: "byCar", sortKeyFields: ["createdAt"])
+  car: Car @hasOne(fields: ["carId"])
+}

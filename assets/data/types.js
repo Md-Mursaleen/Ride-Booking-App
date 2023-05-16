@@ -1,0 +1,80 @@
+export default [
+    {
+        id: "0",
+        type: "UberX",
+        title: "UberX",
+        marginLeft: 5,
+        marginRight: -15,
+        height: 60,
+        width: 80,
+        price: 22,
+        duration: 45,
+        capacity: 4,
+        timing: "9:01pm 4 min away"
+    },
+    {
+        id: "1",
+        type: "UberXL",
+        title: "UberXL",
+        marginLeft: 5,
+        marginRight: -15,
+        height: 60,
+        width: 80,
+        price: 25,
+        duration: 30,
+        capacity: 6,
+        timing: "9:06pm 8 min away"
+    },
+    {
+        id: "2",
+        type: "Lux",
+        title: "Uber Lux",
+        marginLeft: 5,
+        marginRight: -15,
+        height: 60,
+        width: 80,
+        price: 27,
+        duration: 45,
+        capacity: 4,
+        timing: "9:03pm 5 min away"
+    },
+    {
+        id: "3",
+        type: "UberTaxi",
+        title: "Uber Taxi",
+        marginLeft: -5,
+        marginRight: -10,
+        height: 55,
+        width: 85,
+        price: 20,
+        duration: 45,
+        capacity: 4,
+        timing: "9:06pm 3 min away"
+    },
+    {
+        id: "4",
+        type: "UberAuto",
+        title: "Uber Auto",
+        marginLeft: -3,
+        marginRight: 3,
+        height: 55,
+        width: 70,
+        price: 17,
+        duration: 30,
+        capacity: 3,
+        timing: "9:01pm 2 min away"
+    },
+    {
+        id: "5",
+        type: "UberMoto",
+        title: "Uber Moto",
+        marginLeft: -3,
+        marginRight: -3,
+        height: 55,
+        width: 75,
+        price: 12,
+        duration: 45,
+        capacity: 1,
+        timing: "9:03pm 4 min away"
+    }
+];
