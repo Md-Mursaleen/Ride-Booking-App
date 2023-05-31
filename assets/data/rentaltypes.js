@@ -10,22 +10,20 @@ export default [
         reSize: true,
         price: 3.48,
         duration: 45,
-        timing: "12:08pm pickup",
-        description: "10 kilometers included"
+        description: "10 kilometer ride"
     },
     {
         id: "1",
         type: "SedanRentals",
         title: "Sedan Rentals",
-        marginLeft: 5,
+        marginLeft: 8,
         marginRight: -15,
-        height: 85,
+        height: 55,
         width: 75,
         reSize: false,
         price: 3.84,
         duration: 30,
-        timing: "12:10pm",
-        description: "10 kilometers included"
+        description: "10 kilometer ride"
     },
     {
         id: "2",
@@ -38,7 +36,6 @@ export default [
         reSize: true,
         price: 5.36,
         duration: 45,
-        timing: "12:09pm",
-        description: "10 kilometers included"
+        description: "10 kilometer ride"
     }
 ];

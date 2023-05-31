@@ -7,62 +7,62 @@ export default [
         marginRight: -15,
         height: 60,
         width: 80,
-        price: 22,
+        price: 22.36,
         duration: 45,
         capacity: 4,
-        timing: "9:01pm 4 min away"
+        multiplier: 1
     },
     {
         id: "1",
-        type: "UberXL",
-        title: "UberXL",
-        marginLeft: 5,
-        marginRight: -15,
-        height: 60,
-        width: 80,
-        price: 25,
-        duration: 30,
-        capacity: 6,
-        timing: "9:06pm 8 min away"
-    },
-    {
-        id: "2",
         type: "Lux",
         title: "Uber Lux",
         marginLeft: 5,
         marginRight: -15,
         height: 60,
         width: 80,
-        price: 27,
+        price: 27.32,
         duration: 45,
         capacity: 4,
-        timing: "9:03pm 5 min away"
+        multiplier: 1.75
+    },
+    {
+        id: "2",
+        type: "UberXL",
+        title: "UberXL",
+        marginLeft: 5,
+        marginRight: -15,
+        height: 60,
+        width: 80,
+        price: 25.41,
+        duration: 30,
+        capacity: 6,
+        multiplier: 1.2
     },
     {
         id: "3",
-        type: "UberTaxi",
-        title: "Uber Taxi",
-        marginLeft: -5,
-        marginRight: -10,
-        height: 55,
-        width: 85,
-        price: 20,
-        duration: 45,
-        capacity: 4,
-        timing: "9:06pm 3 min away"
-    },
-    {
-        id: "4",
         type: "UberAuto",
         title: "Uber Auto",
         marginLeft: -3,
         marginRight: 3,
         height: 55,
         width: 70,
-        price: 17,
+        price: 17.11,
         duration: 30,
         capacity: 3,
-        timing: "9:01pm 2 min away"
+        multiplier: 0.8
+    },
+    {
+        id: "4",
+        type: "UberTaxi",
+        title: "Uber Taxi",
+        marginLeft: -5,
+        marginRight: -10,
+        height: 55,
+        width: 85,
+        price: 20.64,
+        duration: 45,
+        capacity: 4,
+        multiplier: 0.9
     },
     {
         id: "5",
@@ -72,9 +72,9 @@ export default [
         marginRight: -3,
         height: 55,
         width: 75,
-        price: 12,
+        price: 12.22,
         duration: 45,
         capacity: 1,
-        timing: "9:03pm 4 min away"
+        multiplier: 0.5
     }
 ];

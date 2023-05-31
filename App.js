@@ -7,6 +7,8 @@ import * as NavigationBar from "expo-navigation-bar";
 import RootNavigation from "./src/navigation/RootNavigation";
 import { Amplify } from "aws-amplify";
 import config from "./src/aws-exports";
+import { Provider } from "react-redux";
+import { store } from "./store";
 import { withAuthenticator, AmplifyTheme } from "aws-amplify-react-native";
 
 Amplify.configure({
@@ -21,10 +23,12 @@ function App() {
     NavigationBar.setBackgroundColorAsync("white");
   }, []);
   return (
-    <View style={styles.container}>
-      <RootNavigation />
-      <StatusBar style="auto" backgroundColor="transparent" />
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <RootNavigation />
+        <StatusBar style="auto" backgroundColor="transparent" />
+      </View>
+    </Provider>
   );
 }
 

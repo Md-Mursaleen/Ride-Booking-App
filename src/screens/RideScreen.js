@@ -1,17 +1,16 @@
-import { Dimensions, StyleSheet, View, Alert, Pressable } from "react-native";
+import { Dimensions, StyleSheet, View, Alert } from "react-native";
 import React, { useState } from "react";
 import RideMap from "../components/RideMap";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import Rides from "../components/Rides";
 import { API, Auth, graphqlOperation } from "aws-amplify";
 import { createOrder } from "../graphql/mutations";
-import Ionicons from "react-native-vector-icons/Ionicons";
 
 const RideScreen = () => {
     const navigation = useNavigation();
     const route = useRoute();
-    const typeState = useState("UberX");
-    const { origin, destination } = route.params;
+    const { origin, destination, rentals } = route.params;
+    const typeState = useState("");
     const onSubmit = async () => {
         const [type] = typeState;
         if (!type) {
@@ -46,16 +45,24 @@ const RideScreen = () => {
     };
     return (
         <View style={styles.container}>
-            <View style={styles.mapStyle}>
-                <RideMap origin={origin} destination={destination} />
-            </View>
-            <Pressable style={styles.backButtonContainer}
-                onPress={() => navigation.goBack()}>
-                <Ionicons name="arrow-back-sharp" size={25} color="black" />
-            </Pressable>
-            <View style={{ flex: 1 }}>
-                <Rides typeState={typeState} onSubmit={onSubmit} />
-            </View>
+            {!rentals ? (
+                <View style={styles.mapStyle}>
+                    <RideMap origin={origin} destination={destination} rentals={rentals} />
+                </View>
+            ) : (
+                <View style={styles.mapStyle}>
+                    <RideMap origin={origin} destination={destination} rentals={rentals} />
+                </View>
+            )}
+            {!rentals ? (
+                <View style={{ flex: 1 }}>
+                    <Rides typeState={typeState} onSubmit={onSubmit} rentals={rentals} />
+                </View>
+            ) : (
+                <View style={{ flex: 1 }}>
+                    <Rides typeState={typeState} onSubmit={onSubmit} rentals={rentals} />
+                </View>
+            )}
         </View>
     );
 }

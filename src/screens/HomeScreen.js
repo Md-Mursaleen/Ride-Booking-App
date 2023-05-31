@@ -9,7 +9,7 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.mapStyle}>
-                <HomeMap latitudeDelta={0.0022} longitudeDelta={0.0021} />
+                <HomeMap latitudeDelta={0.0122} longitudeDelta={0.0021} />
             </View>
             <View style={styles.imageContainer}>
                 <Image source={{ uri: "https://i.ibb.co/ZMhy8ws/uber-logo.png" }} style={styles.imageStyle} />

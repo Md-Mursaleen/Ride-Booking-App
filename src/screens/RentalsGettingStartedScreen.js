@@ -14,9 +14,13 @@ const RentalsGettingStartedScreen = () => {
         lat: 28.53352,
         lng: 77.210886
     };
+    const destination = {
+        lat: 28.519185,
+        lng: 77.213005
+    };
     const NavigationtoRide = () => {
         if (origin) {
-            navigation.navigate("Rental", { origin });
+            navigation.navigate("Ride", { origin, destination, rentals: true });
         }
     };
     return (
@@ -38,7 +42,7 @@ const RentalsGettingStartedScreen = () => {
                 <View style={styles.priceContainer}>
                     <Text style={styles.priceTitleText}>Starting at</Text>
                     <View >
-                        <Text style={styles.priceText}>${getTotal()}</Text>
+                        <Text style={[styles.priceText, getTotal() > 10 && { marginLeft: 20 }]}>${getTotal()}</Text>
                         <Text style={styles.priceSubText}>$3.64/hour</Text>
                     </View>
                 </View>
@@ -84,8 +88,8 @@ const styles = StyleSheet.create({
         borderRadius: 50
     },
     timeTextStyle: {
-        fontSize: 35,
-        fontWeight: "600"
+        fontSize: 40,
+        fontWeight: "bold"
     },
     bottomContainer: {
         marginTop: "auto",
@@ -120,14 +124,14 @@ const styles = StyleSheet.create({
         fontWeight: "500"
     },
     priceText: {
-        marginRight: 10,
-        fontSize: 17.5,
+        marginLeft: 28,
+        fontSize: 18,
         fontWeight: "500"
     },
     priceSubText: {
         marginRight: 10,
         marginTop: 5,
-        fontSize: 14.5,
-        color: "#7a7a7a"
+        fontSize: 15,
+        color: "#5d5d5d"
     }
 });

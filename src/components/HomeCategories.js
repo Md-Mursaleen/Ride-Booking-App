@@ -31,19 +31,19 @@ const HomeCategories = () => {
             <View style={styles.bottomRow}>
                 <View style={{ alignItems: "center" }}>
                     <TouchableOpacity style={[styles.bottomRowContainer, { marginLeft: 12 }]}
-                        onPress={() => navigation.navigate("Intercity")}>
-                        <Image source={{ uri: cars["intercity"] }}
-                            style={[styles.bottomRowImage, { marginLeft: 15, marginBottom: 13, height: 57.5 }]} />
-                    </TouchableOpacity>
-                    <Text style={styles.bottomRowText}>Intercity</Text>
-                </View>
-                <View style={{ alignItems: "center" }}>
-                    <TouchableOpacity style={styles.bottomRowContainer}
                         onPress={() => navigation.navigate("Rentals")}>
                         <Image source={{ uri: cars["rentals"] }}
                             style={[styles.bottomRowImage, { marginLeft: 15, marginBottom: 13, height: 57 }]} />
                     </TouchableOpacity>
                     <Text style={styles.bottomRowText}>Rentals</Text>
+                </View>
+                <View style={{ alignItems: "center" }}>
+                    <TouchableOpacity style={styles.bottomRowContainer}
+                        onPress={() => navigation.navigate("Intercity")}>
+                        <Image source={{ uri: cars["intercity"] }}
+                            style={[styles.bottomRowImage, { marginLeft: 15, marginBottom: 13, height: 57.5 }]} />
+                    </TouchableOpacity>
+                    <Text style={styles.bottomRowText}>Intercity</Text>
                 </View>
                 <View style={{ alignItems: "center" }}>
                     <TouchableOpacity style={styles.bottomRowContainer}

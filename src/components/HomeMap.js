@@ -35,8 +35,8 @@ const HomeMap = ({ latitudeDelta, longitudeDelta }) => {
                 provider={PROVIDER_GOOGLE}
                 initialRegion={
                     {
-                        latitude: 28.450627,
-                        longitude: -16.263045,
+                        latitude: 28.536197,
+                        longitude: 77.216648,
                         latitudeDelta: latitudeDelta,
                         longitudeDelta: longitudeDelta
                     }
@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
         width: "100%"
     },
     imageStyle: {
-        height: 65,
-        width: 65,
+        height: 55,
+        width: 55,
         resizeMode: "contain"
     }
 });

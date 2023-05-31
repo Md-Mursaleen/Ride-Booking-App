@@ -9,7 +9,7 @@ const IntercityRideScreen = () => {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
-            <Image source={{ uri: "https://blogapi.uber.com/wp-content/uploads/2020/04/driver-blog-scaled.jpg" }} style={styles.imageStyle} />
+            <Image source={{ uri: "https://i.ytimg.com/vi/qyQAdGfwOjU/maxresdefault.jpg" }} style={styles.imageStyle} />
             <Pressable style={styles.backButtonContainer}
                 onPress={() => navigation.goBack()}>
                 <Ionicons name="arrow-back-sharp" size={25} color="black" />
@@ -17,25 +17,25 @@ const IntercityRideScreen = () => {
             <Text style={styles.textStyle}>Uber Intercity</Text>
             <View style={{ marginTop: 18 }}>
                 <View style={styles.descriptionContainer}>
-                    <FontAwesome name="road" size={20} color="black" />
+                    <FontAwesome name="road" size={18} color="black" />
                     <View>
                         <Text style={styles.descriptionText}>For outstation trips to Agra, Chandigarh,</Text>
                         <Text style={styles.descriptionText}>Jaipur, Dehradun, Mathura and more</Text>
                     </View>
                 </View>
                 <View style={styles.descriptionContainer}>
-                    <MaterialCommunityIcons name="car-clock" size={20} color="black" />
+                    <MaterialCommunityIcons name="car-clock" size={18} color="black" />
                     <Text style={styles.descriptionText}>Book for now or reserve for later</Text>
                 </View>
                 <View style={styles.descriptionContainer}>
-                    <MaterialCommunityIcons name="message-processing" size={20} color="black" />
+                    <MaterialCommunityIcons name="message-processing" size={18} color="black" />
                     <Text style={styles.descriptionText}>Priority chat support post trip</Text>
                 </View>
             </View>
             <TouchableOpacity style={styles.buttonContainer}
                 onPress={() => navigation.navigate("Search", { showRide: true })}>
                 <Text style={styles.buttonText}>Get started</Text>
-                <MaterialCommunityIcons name="arrow-right" size={28} color="white" style={{ marginLeft: "auto" }} />
+                <MaterialCommunityIcons name="arrow-right" size={30} color="white" style={{ marginLeft: "auto" }} />
             </TouchableOpacity>
         </View>
     );
@@ -50,13 +50,12 @@ const styles = StyleSheet.create({
     },
     imageStyle: {
         width: "100%",
-        height: "32%",
-        resizeMode: "contain"
+        height: "32%"
     },
     textStyle: {
         marginTop: 15,
         marginLeft: 25,
-        fontSize: 46,
+        fontSize: 48,
         fontWeight: "bold"
     },
     descriptionContainer: {
@@ -67,11 +66,11 @@ const styles = StyleSheet.create({
     },
     descriptionText: {
         marginLeft: 22,
-        fontSize: 15.5,
+        fontSize: 16,
         fontWeight: "500"
     },
     buttonContainer: {
-        padding: 13,
+        padding: 12,
         marginTop: "auto",
         marginHorizontal: 15,
         marginBottom: 15,

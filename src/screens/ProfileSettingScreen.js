@@ -12,8 +12,7 @@ const ProfileSettingScreen = () => {
     return (
         <View style={styles.container}>
             <View style={{ marginTop: 50 }}>
-                <Pressable style={{ marginLeft: 15 }}
-                    onPress={() => navigation.goBack()}>
+                <Pressable style={{ marginLeft: 15 }} onPress={() => navigation.goBack()}>
                     <Feather name="arrow-left" size={23} />
                 </Pressable>
                 <Text style={styles.settingText}>Settings</Text>
@@ -52,8 +51,7 @@ const ProfileSettingScreen = () => {
                 <View style={styles.bottomContainer}>
                     <View style={styles.bottomSubContainer}>
                         <Text style={styles.headerText}>Other Options</Text>
-                        <Pressable
-                            onPress={() => Auth.signOut()}>
+                        <Pressable onPress={() => Auth.signOut()}>
                             <Text style={styles.bottomText}>Sign Out</Text>
                         </Pressable>
                     </View>
@@ -61,7 +59,7 @@ const ProfileSettingScreen = () => {
             </View>
         </View>
     );
-}
+};
 
 export default ProfileSettingScreen;
 
@@ -106,7 +104,7 @@ const styles = StyleSheet.create({
         color: "grey"
     },
     middleContainer: {
-        marginLeft: 15,
+        marginHorizontal: 15,
         marginTop: 30,
         borderTopColor: "#f4f4f4",
         borderTopWidth: 1
@@ -126,7 +124,7 @@ const styles = StyleSheet.create({
     middleSubText: {
         marginTop: 15,
         fontSize: 13,
-        color: "#767676"
+        color: "#626262"
     },
     bottomContainer: {
         marginTop: 18,

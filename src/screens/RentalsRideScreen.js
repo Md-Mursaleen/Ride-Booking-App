@@ -17,25 +17,25 @@ const RentalsRideScreen = () => {
             <Text style={styles.textStyle}>Uber Rentals</Text>
             <View style={{ marginTop: 20 }}>
                 <View style={styles.descriptionContainer}>
-                    <MaterialCommunityIcons name="timer-sand" size={20} color="black" />
+                    <MaterialCommunityIcons name="timer-sand" size={18} color="black" />
                     <Text style={styles.descriptionText}>Keep a car and driver for up to 12 hours</Text>
                 </View>
                 <View style={styles.descriptionContainer}>
-                    <MaterialIcons name="work" size={20} color="black" />
+                    <MaterialIcons name="work" size={18} color="black" />
                     <View>
                         <Text style={styles.descriptionText}>Ideal for business meetings, tourist travel</Text>
                         <Text style={styles.descriptionText}>and multiple stop trips</Text>
                     </View>
                 </View>
                 <View style={styles.descriptionContainer}>
-                    <MaterialCommunityIcons name="car-clock" size={20} color="black" />
+                    <MaterialCommunityIcons name="car-clock" size={18} color="black" />
                     <Text style={styles.descriptionText}>Book for now or reserve for later</Text>
                 </View>
             </View>
             <TouchableOpacity style={styles.buttonContainer}
                 onPress={() => navigation.navigate("RentalsGettingStarted")}>
                 <Text style={styles.buttonText}>Get started</Text>
-                <MaterialCommunityIcons name="arrow-right" size={28} color="white" style={{ marginLeft: "auto" }} />
+                <MaterialCommunityIcons name="arrow-right" size={30} color="white" style={{ marginLeft: "auto" }} />
             </TouchableOpacity>
         </View>
     );
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     textStyle: {
         marginTop: 15,
         marginLeft: 25,
-        fontSize: 46,
+        fontSize: 48,
         fontWeight: "bold"
     },
     descriptionContainer: {
@@ -66,11 +66,11 @@ const styles = StyleSheet.create({
     },
     descriptionText: {
         marginLeft: 22,
-        fontSize: 15.5,
+        fontSize: 16,
         fontWeight: "500"
     },
     buttonContainer: {
-        padding: 13,
+        padding: 12,
         marginTop: "auto",
         marginHorizontal: 15,
         marginBottom: 15,

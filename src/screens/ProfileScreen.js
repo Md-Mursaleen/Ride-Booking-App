@@ -25,11 +25,11 @@ const ProfileScreen = () => {
                         <Text style={styles.iconText}>Message</Text>
                     </View>
                     <View style={styles.iconContainer}>
-                        <Ionicons name="wallet" size={30} />
+                        <Ionicons name="md-wallet-sharp" size={30} />
                         <Text style={styles.iconText}>Wallet</Text>
                     </View>
                     <Pressable style={[styles.iconContainer, { marginRight: 15 }]}
-                        onPress={() => navigation.navigate("Order")}>
+                        onPress={() => navigation.navigate("Trips")}>
                         <MaterialCommunityIcons name="clock-time-three" size={30} />
                         <Text style={styles.iconText}>Trips</Text>
                     </Pressable>

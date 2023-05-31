@@ -8,8 +8,7 @@ const LoginScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.subContainer}>
-                <Image source={{ uri: "https://i.ibb.co/ZMhy8ws/uber-logo.png" }} style={styles.logoStyle} />
-                <Text style={styles.textStyle}>Login in to access your account</Text>
+                <Text style={styles.textStyle}>Login out to remove your account</Text>
                 <Image source={{ uri: "https://i.ibb.co/CsV9RYZ/login-image.png" }} style={styles.imageStyle} />
                 <TouchableOpacity style={styles.buttonContainer}
                     onPress={() => navigation.navigate("BottomTab")}>

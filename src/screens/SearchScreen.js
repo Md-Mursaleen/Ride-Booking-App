@@ -9,19 +9,23 @@ import Entypo from "react-native-vector-icons/Entypo";
 
 const home = {
     description: "Home",
-    geometry: {
-        location: {
-            lat: 28.53352,
-            lng: 77.210886
+    details: {
+        geometry: {
+            location: {
+                lat: 28.53352,
+                lng: 77.210886
+            }
         }
     }
 };
 const work = {
     description: "Work",
-    geometry: {
-        location: {
-            lat: 28.5921401,
-            lng: 77.04604810000001
+    details: {
+        geometry: {
+            location: {
+                lat: 28.5921401,
+                lng: 77.04604810000001
+            }
         }
     }
 };
@@ -71,10 +75,11 @@ const SearchScreen = ({ route }) => {
                     <View style={styles.userHeaderSubContainer}>
                         <View style={styles.iconContainer}>
                             <Pressable style={styles.iconStyle}>
-                                <Entypo name="user" size={18} color="#cdcdcd" />
+                                <Entypo name="user" size={17} color="#cdcdcd" />
                             </Pressable>
                         </View>
                         <Text style={styles.userHeaderSubContainerText}>Select Rider</Text>
+                        <Entypo name="chevron-small-down" size={20} color="black" style={{ marginLeft: 3 }} />
                     </View>
                 </View>
             )}
@@ -158,7 +163,7 @@ const SearchScreen = ({ route }) => {
             </View>
             {!keyboardOpen && showRide === false && (
                 <View style={[styles.mapStyle, showRide ? { height: Dimensions.get("window").height - 158 } : { height: Dimensions.get("window").height - 170 }]}>
-                    <HomeMap latitudeDelta={0.0120} longitudeDelta={0.0071} />
+                    <HomeMap latitudeDelta={0.0420} longitudeDelta={0.0071} />
                 </View>
             )}
         </View>
