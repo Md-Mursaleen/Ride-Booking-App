@@ -1,5 +1,5 @@
-import { StyleSheet, View, Dimensions, Keyboard, Text, Pressable } from "react-native";
 import React, { useEffect, useState } from "react";
+import { StyleSheet, View, Dimensions, Keyboard, Text, Pressable } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import LocationRow from "../components/LocationRow";
 import { useNavigation } from "@react-navigation/native";

@@ -1,7 +1,4 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
-
-export const getUser = /* GraphQL */ `
+export const getUser = `
   query GetUser($id: ID!) {
     getUser(id: $id) {
       id
@@ -29,7 +26,7 @@ export const getUser = /* GraphQL */ `
     }
   }
 `;
-export const listUsers = /* GraphQL */ `
+export const listUsers = `
   query ListUsers(
     $filter: ModelUserFilterInput
     $limit: Int
@@ -51,7 +48,7 @@ export const listUsers = /* GraphQL */ `
     }
   }
 `;
-export const getCar = /* GraphQL */ `
+export const getCar = `
   query GetCar($id: ID!) {
     getCar(id: $id) {
       id
@@ -81,7 +78,7 @@ export const getCar = /* GraphQL */ `
     }
   }
 `;
-export const listCars = /* GraphQL */ `
+export const listCars = `
   query ListCars(
     $filter: ModelCarFilterInput
     $limit: Int
@@ -105,7 +102,7 @@ export const listCars = /* GraphQL */ `
     }
   }
 `;
-export const getOrder = /* GraphQL */ `
+export const getOrder = `
   query GetOrder($id: ID!) {
     getOrder(id: $id) {
       id
@@ -146,7 +143,7 @@ export const getOrder = /* GraphQL */ `
     }
   }
 `;
-export const listOrders = /* GraphQL */ `
+export const listOrders = `
   query ListOrders(
     $filter: ModelOrderFilterInput
     $limit: Int
@@ -188,7 +185,7 @@ export const listOrders = /* GraphQL */ `
     }
   }
 `;
-export const ordersByUserId = /* GraphQL */ `
+export const ordersByUserId = `
   query OrdersByUserId(
     $userId: ID!
     $sortDirection: ModelSortDirection
@@ -238,7 +235,7 @@ export const ordersByUserId = /* GraphQL */ `
     }
   }
 `;
-export const ordersByCarIdAndCreatedAt = /* GraphQL */ `
+export const ordersByCarIdAndCreatedAt = `
   query OrdersByCarIdAndCreatedAt(
     $carId: ID!
     $createdAt: ModelIDKeyConditionInput

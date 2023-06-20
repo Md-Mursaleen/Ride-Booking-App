@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { useSelector } from "react-redux";
 import { selectTravelTimeInformation } from "../../slices/navSlice";

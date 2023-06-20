@@ -1,19 +1,18 @@
 {
   "expo": {
-    "name": "uber-clone",
+    "name": "Uber",
     "slug": "uber-clone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "plugins": [
-      "@react-native-google-signin/google-signin",
-      "@react-native-firebase/app"
+      "@react-native-google-signin/google-signin"
     ],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -32,7 +31,12 @@
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.FOREGROUND_SERVICE"
       ],
-      "package": "com.md_mursaleen.uberclone"
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAExeQwZ97hbothiv9vBVVrOunsV2oLBUA"
+        }
+      },
+      "package": "com.uber"
     },
     "web": {
       "favicon": "./assets/favicon.png"

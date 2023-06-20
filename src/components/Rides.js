@@ -1,5 +1,5 @@
-import { StyleSheet, Text, TouchableOpacity, ScrollView, View } from "react-native";
 import React from "react";
+import { StyleSheet, Text, TouchableOpacity, ScrollView, View } from "react-native";
 import types from "../../assets/data/types";
 import rentaltypes from "../../assets/data/rentaltypes";
 import RideRow from "./RideRow";

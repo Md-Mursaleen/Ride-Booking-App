@@ -1,20 +1,34 @@
-import { StyleSheet, Text, View, Pressable, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { StyleSheet, Text, View, Pressable, ScrollView, Image } from "react-native";
 import Entypo from "react-native-vector-icons/Entypo";
 import ProfileDetails from "../components/ProfileDetails";
 import { useNavigation } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const ProfileScreen = () => {
     const navigation = useNavigation();
+    const [signedUser, setSignedUser] = useState();
+    const getSignedUserData = async () => {
+        const signedUserData = await AsyncStorage.getItem("SignedUserData");
+        setSignedUser(JSON.parse(signedUserData));
+    };
+    useEffect(() => {
+        getSignedUserData();
+    }, []);
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <Text style={styles.headerText}>Md Mursaleen</Text>
-                <View style={styles.headerIconContainer}>
-                    <Pressable style={styles.headerIconStyle}
-                        onPress={() => navigation.navigate("ProfileSetting")}><Entypo name="user" size={30} color="#cdcdcd" />
+                <Text style={styles.headerText}>{signedUser?.user?.displayName}</Text>
+                <View style={[styles.headerIconContainer, !signedUser && { backgroundColor: "#eee" }]}>
+                    <Pressable style={[styles.headerIconStyle, !signedUser && { backgroundColor: "#f6f6f6", justifyContent: "center" }]}
+                        onPress={() => navigation.navigate("ProfileSetting")}>
+                        {signedUser ? (
+                            <Image source={{ uri: signedUser?.user?.photoURL }} style={styles.imageStyle} />
+                        ) : (
+                            <Entypo name="user" size={30} color="#cdcdcd" />
+                        )}
                     </Pressable>
                 </View>
             </View>
@@ -64,7 +78,6 @@ const styles = StyleSheet.create({
         width: 65,
         height: 65,
         marginRight: 20,
-        backgroundColor: "#eee",
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 50
@@ -73,8 +86,11 @@ const styles = StyleSheet.create({
         width: 55,
         height: 55,
         alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#f6f6f6",
+        borderRadius: 50
+    },
+    imageStyle: {
+        width: 52,
+        height: 52,
         borderRadius: 50
     },
     iconRow: {

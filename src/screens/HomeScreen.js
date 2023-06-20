@@ -1,5 +1,5 @@
-import { StyleSheet, View, Dimensions, ScrollView, Image } from "react-native";
 import React from "react";
+import { StyleSheet, View, Dimensions, ScrollView, Image } from "react-native";
 import HomeMap from "../components/HomeMap";
 import HomeMessage from "../components/HomeMessage";
 import HomeSearch from "../components/HomeSearch";
@@ -44,5 +44,5 @@ const styles = StyleSheet.create({
         height: 75,
         width: 80,
         resizeMode: "contain"
-    },
+    }
 });

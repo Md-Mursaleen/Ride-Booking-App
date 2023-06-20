@@ -1,5 +1,5 @@
-import { StyleSheet, View } from "react-native";
 import React, { useEffect, useRef } from "react";
+import { StyleSheet, View } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { useDispatch } from "react-redux";
@@ -12,9 +12,8 @@ const RideMap = ({ origin, destination, rentals }) => {
     const dispatch = useDispatch();
     {
         !rentals &&
-            useEffect(() => {
-                if (!origin || !destination) return;
-                mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
+            setTimeout(() => {
+                mapRef?.current?.fitToSuppliedMarkers(["origin", "destination"], {
                     animated: true,
                     edgePadding: {
                         top: 50,
@@ -23,7 +22,7 @@ const RideMap = ({ origin, destination, rentals }) => {
                         left: 50
                     }
                 });
-            }, [origin, destination]);
+            }, 1000);
         useEffect(() => {
             if (!origin || !destination) return;
             const getTravelTime = async () => {
@@ -42,7 +41,6 @@ const RideMap = ({ origin, destination, rentals }) => {
             {!rentals ? (
                 <MapView style={styles.mapViewStyle}
                     ref={mapRef}
-                    mapType="mutedStandard"
                     userInterfaceStyle="dark"
                     showsUserLocation={true}
                     provider={PROVIDER_GOOGLE}
@@ -102,7 +100,7 @@ const RideMap = ({ origin, destination, rentals }) => {
                             longitudeDelta: 0.0121
                         }
                     }>
-                    <Marker coordinate={{
+                    <Marker draggable coordinate={{
                         latitude: origin.lat,
                         longitude: origin.lng
                     }}

@@ -1,14 +1,27 @@
+import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, Pressable } from "react-native";
-import React from "react";
 import Feather from "react-native-vector-icons/Feather";
 import Entypo from "react-native-vector-icons/Entypo";
-import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons";
+import Octicons from "react-native-vector-icons/Octicons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import { useNavigation } from "@react-navigation/native";
-import { Auth } from "aws-amplify";
+import auth from "@react-native-firebase/auth";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const ProfileSettingScreen = () => {
     const navigation = useNavigation();
+    const [signedUser, setSignedUser] = useState();
+    const getSignedUserData = async () => {
+        const signedUserData = await AsyncStorage.getItem("SignedUserData");
+        setSignedUser(JSON.parse(signedUserData));
+    };
+    useEffect(() => {
+        getSignedUserData();
+    }, []);
+    const signOutWithGoogle = async () => {
+        auth().signOut();
+        navigation.navigate("Login");
+    };
     return (
         <View style={styles.container}>
             <View style={{ marginTop: 50 }}>
@@ -22,7 +35,7 @@ const ProfileSettingScreen = () => {
                     </Pressable>
                 </View>
                 <View style={{ marginTop: 10 }}>
-                    <Text style={styles.userText}>Md Mursaleen</Text>
+                    <Text style={styles.userText}>{signedUser?.user?.displayName}</Text>
                     <Text style={styles.accountText}>EDIT ACCOUNT</Text>
                 </View>
                 <View style={styles.middleContainer}>
@@ -30,7 +43,7 @@ const ProfileSettingScreen = () => {
                     <View style={{ marginTop: 20 }}>
                         <View style={styles.middleSubContainer}>
                             <View>
-                                <SimpleLineIcons name="home" size={20} />
+                                <Octicons name="home" size={21} />
                             </View>
                             <View style={{ marginLeft: 20 }}>
                                 <Text style={styles.middleText}>Home</Text>
@@ -51,7 +64,7 @@ const ProfileSettingScreen = () => {
                 <View style={styles.bottomContainer}>
                     <View style={styles.bottomSubContainer}>
                         <Text style={styles.headerText}>Other Options</Text>
-                        <Pressable onPress={() => Auth.signOut()}>
+                        <Pressable onPress={() => signOutWithGoogle()}>
                             <Text style={styles.bottomText}>Sign Out</Text>
                         </Pressable>
                     </View>
@@ -72,10 +85,10 @@ const styles = StyleSheet.create({
         width: 75,
         height: 75,
         marginTop: 20,
-        backgroundColor: "#eee",
         alignItems: "center",
         alignSelf: "center",
         justifyContent: "center",
+        backgroundColor: "#eee",
         borderRadius: 50
     },
     iconStyle: {
@@ -84,6 +97,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#f6f6f6",
+        borderRadius: 50
+    },
+    imageStyle: {
+        width: 75,
+        height: 75,
         borderRadius: 50
     },
     settingText: {

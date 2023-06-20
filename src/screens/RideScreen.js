@@ -1,10 +1,11 @@
-import { Dimensions, StyleSheet, View, Alert } from "react-native";
 import React, { useState } from "react";
-import RideMap from "../components/RideMap";
+import { Dimensions, StyleSheet, View, Alert } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import { db } from "../../firebase";
+import firebase from "../../firebase";
+import "firebase/compat/firestore";
+import RideMap from "../components/RideMap";
 import Rides from "../components/Rides";
-import { API, Auth, graphqlOperation } from "aws-amplify";
-import { createOrder } from "../graphql/mutations";
 
 const RideScreen = () => {
     const navigation = useNavigation();
@@ -18,22 +19,22 @@ const RideScreen = () => {
         }
         try {
             const date = new Date();
-            const userInfo = await Auth.currentAuthenticatedUser();
-            const input = {
+            const trips = {
                 type,
                 createdAt: date.toISOString(),
                 originLatitude: origin.details.geometry.location.lat,
                 originLongitude: origin.details.geometry.location.lng,
                 destinationLatitude: destination.details.geometry.location.lat,
                 destinationLongitude: destination.details.geometry.location.lng,
-                userId: userInfo.attributes.sub,
                 carId: "1"
             }
-            const response = await API.graphql(graphqlOperation(createOrder, { input: input }));
-            console.log(response);
+            db.collection("trips").add({
+                trips: trips,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
             Alert.alert(
                 "Hey",
-                "Your order has been placed.",
+                "Your trip has been placed.",
                 [{
                     text: "Go Home",
                     onPress: () => navigation.navigate("Home")

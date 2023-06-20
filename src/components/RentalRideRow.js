@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
 const RideRow = ({ type, isSelected, onPress }) => {
     const cars = {

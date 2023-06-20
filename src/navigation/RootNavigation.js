@@ -1,24 +1,28 @@
 import React from "react";
-import SearchScreen from "../screens/SearchScreen";
-import RideScreen from "../screens/RideScreen";
-import ProfileSettingScreen from "../screens/ProfileSettingScreen";
-import IntercityRideScreen from "../screens/IntercityRideScreen";
 import { createStackNavigator } from "@react-navigation/stack";
-import BottomNavigation from "./BottomNavigation";
+import BottomTabNavigation from "./BottomTabNavigation";
 import { NavigationContainer } from "@react-navigation/native";
 import TaxiRideScreen from "../screens/TaxiRideScreen";
 import RentalsRideScreen from "../screens/RentalsRideScreen";
 import RentalsGettingStartedScreen from "../screens/RentalsGettingStartedScreen";
+import SearchScreen from "../screens/SearchScreen";
+import RideScreen from "../screens/RideScreen";
+import ProfileSettingScreen from "../screens/ProfileSettingScreen";
+import IntercityRideScreen from "../screens/IntercityRideScreen";
 import BikesRideScreen from "../screens/BikesRideScreen";
 import TripsScreen from "../screens/TripsScreen";
+import LoginScreen from "../screens/LoginScreen";
+import GettingStartedScreen from "../screens/GettingStartedScreen";
 
 const Stack = createStackNavigator();
 
 const RootNavigation = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} >
-                <Stack.Screen name="BottomTab" component={BottomNavigation} />
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="GettingStarted" >
+                <Stack.Screen name="GettingStarted" component={GettingStartedScreen} />
+                <Stack.Screen name="Login" component={LoginScreen} />
+                <Stack.Screen name="BottomTab" component={BottomTabNavigation} />
                 <Stack.Screen name="Intercity" component={IntercityRideScreen} />
                 <Stack.Screen name="Bikes" component={BikesRideScreen} />
                 <Stack.Screen name="Rentals" component={RentalsRideScreen} />

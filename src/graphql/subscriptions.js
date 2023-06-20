@@ -1,7 +1,4 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
-
-export const onCreateUser = /* GraphQL */ `
+export const onCreateUser = `
   subscription OnCreateUser(
     $filter: ModelSubscriptionUserFilterInput
     $owner: String
@@ -32,7 +29,7 @@ export const onCreateUser = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateUser = /* GraphQL */ `
+export const onUpdateUser = `
   subscription OnUpdateUser(
     $filter: ModelSubscriptionUserFilterInput
     $owner: String
@@ -63,7 +60,7 @@ export const onUpdateUser = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteUser = /* GraphQL */ `
+export const onDeleteUser = `
   subscription OnDeleteUser(
     $filter: ModelSubscriptionUserFilterInput
     $owner: String
@@ -94,7 +91,7 @@ export const onDeleteUser = /* GraphQL */ `
     }
   }
 `;
-export const onCreateCar = /* GraphQL */ `
+export const onCreateCar = `
   subscription OnCreateCar(
     $filter: ModelSubscriptionCarFilterInput
     $owner: String
@@ -127,7 +124,7 @@ export const onCreateCar = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateCar = /* GraphQL */ `
+export const onUpdateCar = `
   subscription OnUpdateCar(
     $filter: ModelSubscriptionCarFilterInput
     $owner: String
@@ -160,7 +157,7 @@ export const onUpdateCar = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteCar = /* GraphQL */ `
+export const onDeleteCar = `
   subscription OnDeleteCar(
     $filter: ModelSubscriptionCarFilterInput
     $owner: String
@@ -193,7 +190,7 @@ export const onDeleteCar = /* GraphQL */ `
     }
   }
 `;
-export const onCreateOrder = /* GraphQL */ `
+export const onCreateOrder = `
   subscription OnCreateOrder(
     $filter: ModelSubscriptionOrderFilterInput
     $owner: String
@@ -237,7 +234,7 @@ export const onCreateOrder = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateOrder = /* GraphQL */ `
+export const onUpdateOrder = `
   subscription OnUpdateOrder(
     $filter: ModelSubscriptionOrderFilterInput
     $owner: String
@@ -281,7 +278,7 @@ export const onUpdateOrder = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteOrder = /* GraphQL */ `
+export const onDeleteOrder = `
   subscription OnDeleteOrder(
     $filter: ModelSubscriptionOrderFilterInput
     $owner: String

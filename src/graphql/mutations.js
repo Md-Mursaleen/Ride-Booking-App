@@ -1,7 +1,4 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
-
-export const createUser = /* GraphQL */ `
+export const createUser = `
   mutation CreateUser(
     $input: CreateUserInput!
     $condition: ModelUserConditionInput
@@ -32,7 +29,7 @@ export const createUser = /* GraphQL */ `
     }
   }
 `;
-export const updateUser = /* GraphQL */ `
+export const updateUser = `
   mutation UpdateUser(
     $input: UpdateUserInput!
     $condition: ModelUserConditionInput
@@ -63,7 +60,7 @@ export const updateUser = /* GraphQL */ `
     }
   }
 `;
-export const deleteUser = /* GraphQL */ `
+export const deleteUser = `
   mutation DeleteUser(
     $input: DeleteUserInput!
     $condition: ModelUserConditionInput
@@ -94,7 +91,7 @@ export const deleteUser = /* GraphQL */ `
     }
   }
 `;
-export const createCar = /* GraphQL */ `
+export const createCar = `
   mutation CreateCar(
     $input: CreateCarInput!
     $condition: ModelCarConditionInput
@@ -127,7 +124,7 @@ export const createCar = /* GraphQL */ `
     }
   }
 `;
-export const updateCar = /* GraphQL */ `
+export const updateCar = `
   mutation UpdateCar(
     $input: UpdateCarInput!
     $condition: ModelCarConditionInput
@@ -160,7 +157,7 @@ export const updateCar = /* GraphQL */ `
     }
   }
 `;
-export const deleteCar = /* GraphQL */ `
+export const deleteCar = `
   mutation DeleteCar(
     $input: DeleteCarInput!
     $condition: ModelCarConditionInput
@@ -193,7 +190,7 @@ export const deleteCar = /* GraphQL */ `
     }
   }
 `;
-export const createOrder = /* GraphQL */ `
+export const createOrder = `
   mutation CreateOrder(
     $input: CreateOrderInput!
     $condition: ModelOrderConditionInput
@@ -237,7 +234,7 @@ export const createOrder = /* GraphQL */ `
     }
   }
 `;
-export const updateOrder = /* GraphQL */ `
+export const updateOrder = `
   mutation UpdateOrder(
     $input: UpdateOrderInput!
     $condition: ModelOrderConditionInput
@@ -281,7 +278,7 @@ export const updateOrder = /* GraphQL */ `
     }
   }
 `;
-export const deleteOrder = /* GraphQL */ `
+export const deleteOrder = `
   mutation DeleteOrder(
     $input: DeleteOrderInput!
     $condition: ModelOrderConditionInput

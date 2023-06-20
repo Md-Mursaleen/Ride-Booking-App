@@ -8,13 +8,13 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 const BottomTab = createBottomTabNavigator();
 
-const BottomNavigation = () => {
+const BottomTabNavigation = () => {
     return (
         <BottomTab.Navigator screenOptions={{
             headerShown: false,
             tabBarActiveTintColor: "black",
             tabBarInactiveTintColor: "darkgrey"
-        }}>
+        }} initialRouteName="Home">
             <BottomTab.Screen name="Home" component={HomeScreen} options={
                 {
                     tabBarIcon: ({ size, color }) => (<Foundation name="home" size={size} color={color} />),
@@ -31,7 +31,7 @@ const BottomNavigation = () => {
     );
 }
 
-export default BottomNavigation;
+export default BottomTabNavigation;
 
 const styles = StyleSheet.create({
     textStyle: {

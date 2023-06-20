@@ -1,5 +1,5 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View, Pressable } from "react-native";
 import React from "react";
+import { Image, StyleSheet, Text, TouchableOpacity, View, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Ionicons from "react-native-vector-icons/Ionicons";

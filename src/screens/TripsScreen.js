@@ -1,10 +1,21 @@
+import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React from "react";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
+import { db } from "../../firebase";
+import "firebase/compat/firestore";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const TripsScreen = () => {
     const navigation = useNavigation();
+    const [lastRide, setLastRide] = useState([]);
+    useEffect(() => {
+        const unsubscribe = db.collection("trips").orderBy("createdAt", "desc").limit(1).onSnapshot((snapshot) => {
+            snapshot.docs.map((doc) => {
+                setLastRide(doc.data());
+            });
+        });
+        return () => unsubscribe();
+    }, []);
     return (
         <View style={styles.container}>
             <Ionicons name="arrow-back" size={28} color="#282828" style={styles.iconStyle} onPress={() => navigation.goBack()} />
