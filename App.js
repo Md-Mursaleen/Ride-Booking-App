@@ -3,9 +3,9 @@ import "react-native-gesture-handler";
 import React, { useEffect } from "react";
 import { StyleSheet, View, LogBox } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import * as NavigationBar from "expo-navigation-bar";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import * as NavigationBar from "expo-navigation-bar";
 import RootNavigation from "./src/navigation/RootNavigation";
 
 LogBox.ignoreAllLogs();
