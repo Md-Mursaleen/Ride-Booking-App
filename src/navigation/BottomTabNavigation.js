@@ -15,18 +15,8 @@ const BottomTabNavigation = () => {
             tabBarActiveTintColor: "black",
             tabBarInactiveTintColor: "darkgrey"
         }} initialRouteName="Home">
-            <BottomTab.Screen name="Home" component={HomeScreen} options={
-                {
-                    tabBarIcon: ({ size, color }) => (<Foundation name="home" size={size} color={color} />),
-                    tabBarLabelStyle: { ...styles.textStyle }
-                }
-            } />
-            <BottomTab.Screen name="Account" component={ProfileScreen} options={
-                {
-                    tabBarIcon: ({ size, color }) => (<MaterialCommunityIcons name="account" size={size} color={color} />),
-                    tabBarLabelStyle: { ...styles.textStyle }
-                }
-            } />
+            <BottomTab.Screen name="Home" component={HomeScreen} options={{ tabBarIcon: ({ size, color }) => (<Foundation name="home" size={size} color={color} />), tabBarLabelStyle: { ...styles.textStyle } }} />
+            <BottomTab.Screen name="Account" component={ProfileScreen} options={{ tabBarIcon: ({ size, color }) => (<MaterialCommunityIcons name="account" size={size} color={color} />), tabBarLabelStyle: { ...styles.textStyle } }} />
         </BottomTab.Navigator>
     );
 }

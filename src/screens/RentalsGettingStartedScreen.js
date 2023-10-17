@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Entypo from "react-native-vector-icons/Entypo";
-import { useNavigation } from "@react-navigation/native";
 
 const RentalsGettingStartedScreen = () => {
     const navigation = useNavigation();
@@ -96,21 +96,6 @@ const styles = StyleSheet.create({
         borderTopWidth: 2,
         borderTopColor: "#f6f6f6"
     },
-    buttonContainer: {
-        padding: 15,
-        marginHorizontal: 16,
-        marginBottom: 15,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "black",
-        borderRadius: 7.5
-    },
-    buttonText: {
-        fontSize: 18,
-        fontWeight: "500",
-        color: "white"
-    },
     priceContainer: {
         marginTop: 10,
         marginBottom: 15,
@@ -133,5 +118,20 @@ const styles = StyleSheet.create({
         marginTop: 5,
         fontSize: 15,
         color: "#5d5d5d"
+    },
+    buttonContainer: {
+        padding: 15,
+        marginHorizontal: 16,
+        marginBottom: 15,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "black",
+        borderRadius: 7.5
+    },
+    buttonText: {
+        fontSize: 18,
+        fontWeight: "500",
+        color: "white"
     }
 });

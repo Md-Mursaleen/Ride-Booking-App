@@ -26,17 +26,17 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#286ef0"
     },
-    imageStyle: {
-        height: 270,
-        width: "100%",
-        alignSelf: "center"
-    },
     logoStyle: {
         marginTop: 70,
         height: 90,
         width: 95,
         alignSelf: "center",
         resizeMode: "contain"
+    },
+    imageStyle: {
+        height: 270,
+        width: "100%",
+        alignSelf: "center"
     },
     subTitleText: {
         marginTop: 25,

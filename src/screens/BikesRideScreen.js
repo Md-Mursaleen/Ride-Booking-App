@@ -1,10 +1,10 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { useNavigation } from "@react-navigation/native";
 
 const BikesRideScreen = () => {
     const navigation = useNavigation();
@@ -52,6 +52,17 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "32%"
     },
+    backButtonContainer: {
+        position: "absolute",
+        marginLeft: 15,
+        marginTop: 35,
+        width: 47,
+        height: 47,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "white",
+        borderRadius: 50
+    },
     textStyle: {
         marginTop: 15,
         marginLeft: 25,
@@ -84,16 +95,5 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "500",
         color: "white"
-    },
-    backButtonContainer: {
-        position: "absolute",
-        marginLeft: 15,
-        marginTop: 35,
-        width: 47,
-        height: 47,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "white",
-        borderRadius: 50
     }
 });

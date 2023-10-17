@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { StyleSheet, View } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
-import MapViewDirections from "react-native-maps-directions";
 import { useDispatch } from "react-redux";
 import { setTravelTimeInformation } from "../../slices/navSlice";
+import MapViewDirections from "react-native-maps-directions";
 
 const GOOGLE_MAPS_APIKEY = "AIzaSyAExeQwZ97hbothiv9vBVVrOunsV2oLBUA";
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import Feather from "react-native-vector-icons/Feather";
 import Entypo from "react-native-vector-icons/Entypo";
 import Octicons from "react-native-vector-icons/Octicons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import { useNavigation } from "@react-navigation/native";
 import auth from "@react-native-firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -81,6 +81,11 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "white"
     },
+    settingText: {
+        marginLeft: 15,
+        fontSize: 38,
+        fontWeight: "500"
+    },
     iconContainer: {
         width: 75,
         height: 75,
@@ -98,16 +103,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: "#f6f6f6",
         borderRadius: 50
-    },
-    imageStyle: {
-        width: 75,
-        height: 75,
-        borderRadius: 50
-    },
-    settingText: {
-        marginLeft: 15,
-        fontSize: 38,
-        fontWeight: "500"
     },
     userText: {
         fontSize: 18,
@@ -127,13 +122,13 @@ const styles = StyleSheet.create({
         borderTopColor: "#f4f4f4",
         borderTopWidth: 1
     },
-    middleSubContainer: {
-        flexDirection: "row",
-        alignItems: "center"
-    },
     headerText: {
         fontSize: 20,
         fontWeight: "500"
+    },
+    middleSubContainer: {
+        flexDirection: "row",
+        alignItems: "center"
     },
     middleText: {
         fontSize: 15,
@@ -158,5 +153,10 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "500",
         color: "grey"
+    },
+    imageStyle: {
+        width: 75,
+        height: 75,
+        borderRadius: 50
     }
 });

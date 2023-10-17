@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     travelTimeInformation: null
 };
-
 export const navSlice = createSlice({
     name: "nav",
     initialState,

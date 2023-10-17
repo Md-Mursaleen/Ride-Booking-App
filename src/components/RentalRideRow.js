@@ -41,6 +41,10 @@ const styles = StyleSheet.create({
         fontSize: 18.5,
         fontWeight: "500"
     },
+    middleContainerText: {
+        fontSize: 14,
+        color: "#5d5d5d"
+    },
     priceContainer: {
         marginLeft: "auto",
         width: 100,
@@ -56,10 +60,6 @@ const styles = StyleSheet.create({
     priceTextperHour: {
         marginTop: 5,
         fontSize: 14.5,
-        color: "#5d5d5d"
-    },
-    middleContainerText: {
-        fontSize: 14,
         color: "#5d5d5d"
     }
 });

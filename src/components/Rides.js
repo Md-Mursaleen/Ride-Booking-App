@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, ScrollView, View } from "react-native";
+import { useSelector } from "react-redux";
+import { selectTravelTimeInformation } from "../../slices/navSlice";
+import { useNavigation } from "@react-navigation/native";
 import types from "../../assets/data/types";
 import rentaltypes from "../../assets/data/rentaltypes";
 import RideRow from "./RideRow";
 import RentalRideRow from "./RentalRideRow";
-import { useSelector } from "react-redux";
-import { selectTravelTimeInformation } from "../../slices/navSlice";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { useNavigation } from "@react-navigation/native";
 
 const Rides = ({ typeState, onSubmit, rentals }) => {
     const [selectedType, setSelectedType] = typeState;

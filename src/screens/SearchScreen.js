@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View, Dimensions, Keyboard, Text, Pressable } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
-import LocationRow from "../components/LocationRow";
 import { useNavigation } from "@react-navigation/native";
+import LocationRow from "../components/LocationRow";
 import HomeMap from "../components/HomeMap";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Entypo from "react-native-vector-icons/Entypo";
@@ -177,6 +177,50 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "white"
     },
+    rideHeaderContainer: {
+        marginTop: 40,
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    rideHeaderText: {
+        marginLeft: "25%",
+        fontSize: 17.5,
+        fontWeight: "500"
+    },
+    userHeaderContainer: {
+        marginTop: 30,
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    userHeaderSubContainer: {
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    iconContainer: {
+        width: 32,
+        height: 32,
+        marginTop: 20,
+        marginBottom: 20,
+        marginLeft: 100,
+        backgroundColor: "#eee",
+        alignItems: "center",
+        alignSelf: "center",
+        justifyContent: "center",
+        borderRadius: 50
+    },
+    iconStyle: {
+        width: 28,
+        height: 28,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#f6f6f6",
+        borderRadius: 50
+    },
+    userHeaderSubContainerText: {
+        marginLeft: 10,
+        fontSize: 14.5,
+        fontWeight: "500"
+    },
     circleStyle: {
         position: "absolute",
         width: 5,
@@ -204,49 +248,5 @@ const styles = StyleSheet.create({
     },
     mapStyle: {
         marginTop: "auto"
-    },
-    rideHeaderContainer: {
-        marginTop: 40,
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    userHeaderContainer: {
-        marginTop: 30,
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    userHeaderSubContainer: {
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    userHeaderSubContainerText: {
-        marginLeft: 10,
-        fontSize: 14.5,
-        fontWeight: "500"
-    },
-    rideHeaderText: {
-        marginLeft: "25%",
-        fontSize: 17.5,
-        fontWeight: "500"
-    },
-    iconContainer: {
-        width: 32,
-        height: 32,
-        marginTop: 20,
-        marginBottom: 20,
-        marginLeft: 100,
-        backgroundColor: "#eee",
-        alignItems: "center",
-        alignSelf: "center",
-        justifyContent: "center",
-        borderRadius: 50
-    },
-    iconStyle: {
-        width: 28,
-        height: 28,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#f6f6f6",
-        borderRadius: 50
     }
 });

@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import BottomTabNavigation from "./BottomTabNavigation";
 import { NavigationContainer } from "@react-navigation/native";
+import BottomTabNavigation from "./BottomTabNavigation";
 import TaxiRideScreen from "../screens/TaxiRideScreen";
 import RentalsRideScreen from "../screens/RentalsRideScreen";
 import RentalsGettingStartedScreen from "../screens/RentalsGettingStartedScreen";

@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     cars: null
 };
-
 const carSlice = createSlice({
     name: "car",
     initialState,
