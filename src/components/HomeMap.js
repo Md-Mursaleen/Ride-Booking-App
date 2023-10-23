@@ -84,17 +84,14 @@ const HomeMap = ({ latitudeDelta, longitudeDelta }) => {
     };
     return (
         <View>
-            <MapView style={styles.mapViewStyle}
-                showsUserLocation={true}
+            <MapView showsUserLocation={true}
                 provider={PROVIDER_GOOGLE}
-                initialRegion={
-                    {
-                        latitude: 28.536197,
-                        longitude: 77.216648,
-                        latitudeDelta: latitudeDelta,
-                        longitudeDelta: longitudeDelta
-                    }
-                }
+                initialRegion={{
+                    latitude: 28.536197,
+                    longitude: 77.216648,
+                    latitudeDelta: latitudeDelta,
+                    longitudeDelta: longitudeDelta
+                }}
                 customMapStyle={[
                     {
                         "featureType": "landscape",
@@ -112,7 +109,8 @@ const HomeMap = ({ latitudeDelta, longitudeDelta }) => {
                             }
                         ]
                     }
-                ]}>
+                ]}
+                style={styles.mapViewStyle}>
                 {cars.map((car) => (
                     <Marker
                         key={car.id}

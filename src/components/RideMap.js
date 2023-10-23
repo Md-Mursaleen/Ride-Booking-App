@@ -39,19 +39,16 @@ const RideMap = ({ origin, destination, rentals }) => {
     return (
         <View>
             {!rentals ? (
-                <MapView style={styles.mapViewStyle}
-                    ref={mapRef}
+                <MapView ref={mapRef}
                     userInterfaceStyle="dark"
                     showsUserLocation={true}
                     provider={PROVIDER_GOOGLE}
-                    initialRegion={
-                        {
-                            latitude: origin.details.geometry.location.lat,
-                            longitude: origin.details.geometry.location.lng,
-                            latitudeDelta: 0.005,
-                            longitudeDelta: 0.005
-                        }
-                    }
+                    initialRegion={{
+                        latitude: origin.details.geometry.location.lat,
+                        longitude: origin.details.geometry.location.lng,
+                        latitudeDelta: 0.005,
+                        longitudeDelta: 0.005
+                    }}
                     customMapStyle={[
                         {
                             "featureType": "landscape",
@@ -69,7 +66,8 @@ const RideMap = ({ origin, destination, rentals }) => {
                                 }
                             ]
                         }
-                    ]}>
+                    ]}
+                    style={styles.mapViewStyle}>
                     <MapViewDirections origin={origin.data.description}
                         destination={destination.data.description}
                         apikey={GOOGLE_MAPS_APIKEY}
