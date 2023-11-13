@@ -8,19 +8,16 @@ const RideRow = ({ type, isSelected, onPress }) => {
         XLRentals: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_485,h_385/f_auto,q_auto/products/carousel/UberXL.png"
     };
     return (
-        <TouchableOpacity key={type.id} style={[styles.container, {
-            backgroundColor: isSelected ? "#eee" : "white"
-        }]}
-            onPress={onPress}>
+        <TouchableOpacity key={type.id} style={[styles.container, { backgroundColor: isSelected ? "#eee" : "white" }]} onPress={onPress}>
             <Image source={{ uri: cars[type.type] }} style={[{ marginLeft: type.marginLeft, marginRight: type.marginRight, height: type.height, width: type.width }, type.reSize && { resizeMode: "contain" }]} />
             <View style={{ marginLeft: 35 }}>
-                <Text style={styles.titleText}>{type.title}{" "}</Text>
-                <Text style={[styles.middleContainerText, { marginTop: 2 }]}>{type.description}</Text>
+                <Text style={styles.titleTextStyle}>{type.title}{" "}</Text>
+                <Text style={[styles.middleContainerTextStyle, { marginTop: 2 }]}>{type.description}</Text>
             </View>
             <View style={styles.priceContainer}>
                 <View>
-                    <Text style={styles.priceText}>${type.price}</Text>
-                    <Text style={styles.priceTextperHour}>${type.price}/hour</Text>
+                    <Text style={styles.priceTextStyle}>${type.price}</Text>
+                    <Text style={styles.priceTextperHourStyle}>${type.price}/hour</Text>
                 </View>
             </View>
         </TouchableOpacity>
@@ -36,12 +33,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center"
     },
-    titleText: {
+    titleTextStyle: {
         marginBottom: 5,
         fontSize: 18.5,
         fontWeight: "500"
     },
-    middleContainerText: {
+    middleContainerTextStyle: {
         fontSize: 14,
         color: "#5d5d5d"
     },
@@ -52,12 +49,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "flex-end"
     },
-    priceText: {
+    priceTextStyle: {
         marginLeft: 28,
         fontSize: 17,
         fontWeight: "bold"
     },
-    priceTextperHour: {
+    priceTextperHourStyle: {
         marginTop: 5,
         fontSize: 14.5,
         color: "#5d5d5d"

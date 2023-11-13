@@ -26,29 +26,26 @@ const RentalsGettingStartedScreen = () => {
     return (
         <View style={styles.container}>
             <Ionicons name="arrow-back" size={26} color="#141414" style={styles.iconStyle} onPress={() => navigation.goBack()} />
-            <Text style={styles.titleStyle}>How much time do you need?</Text>
+            <Text style={styles.titleTextStyle}>How much time do you need?</Text>
             <View style={styles.timeContainer}>
-                <Pressable style={[styles.timeIconContainer, quantity > 1 ? { backgroundColor: "#eee" } : { backgroundColor: "#f6f6f6" }]}
-                    onPress={() => { if (quantity > 1) { setQuantity(quantity - 1) } }}>
+                <Pressable style={[styles.timeIconContainer, quantity > 1 ? { backgroundColor: "#eee" } : { backgroundColor: "#f6f6f6" }]} onPress={() => { if (quantity > 1) { setQuantity(quantity - 1) } }}>
                     <Entypo name="minus" size={25} style={quantity > 1 ? { color: "black" } : { color: "grey" }} />
                 </Pressable>
                 <Text style={styles.timeTextStyle}>{quantity} hour</Text>
-                <Pressable style={styles.timeIconContainer}
-                    onPress={() => setQuantity(quantity + 1)}>
+                <Pressable style={styles.timeIconContainer} onPress={() => setQuantity(quantity + 1)}>
                     <Entypo name="plus" size={25} color="black" />
                 </Pressable>
             </View>
             <View style={styles.bottomContainer}>
                 <View style={styles.priceContainer}>
-                    <Text style={styles.priceTitleText}>Starting at</Text>
+                    <Text style={styles.priceTitleTextStyle}>Starting at</Text>
                     <View >
-                        <Text style={[styles.priceText, getTotal() > 10 && { marginLeft: 20 }]}>${getTotal()}</Text>
-                        <Text style={styles.priceSubText}>$3.64/hour</Text>
+                        <Text style={[styles.priceTextStyle, getTotal() > 10 && { marginLeft: 20 }]}>${getTotal()}</Text>
+                        <Text style={styles.priceSubTextStyle}>$3.64/hour</Text>
                     </View>
                 </View>
-                <TouchableOpacity style={styles.buttonContainer}
-                    onPress={NavigationtoRide}>
-                    <Text style={styles.buttonText}>Choose a ride</Text>
+                <TouchableOpacity style={styles.buttonContainer} onPress={NavigationtoRide}>
+                    <Text style={styles.buttonTextStyle}>Choose a ride</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -66,7 +63,7 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         marginTop: 85
     },
-    titleStyle: {
+    titleTextStyle: {
         marginTop: 30,
         marginLeft: 15,
         fontSize: 29.5,
@@ -103,17 +100,17 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between"
     },
-    priceTitleText: {
+    priceTitleTextStyle: {
         marginLeft: 15,
         fontSize: 19,
         fontWeight: "500"
     },
-    priceText: {
+    priceTextStyle: {
         marginLeft: 28,
         fontSize: 18,
         fontWeight: "500"
     },
-    priceSubText: {
+    priceSubTextStyle: {
         marginRight: 10,
         marginTop: 5,
         fontSize: 15,
@@ -129,7 +126,7 @@ const styles = StyleSheet.create({
         backgroundColor: "black",
         borderRadius: 7.5
     },
-    buttonText: {
+    buttonTextStyle: {
         fontSize: 18,
         fontWeight: "500",
         color: "white"

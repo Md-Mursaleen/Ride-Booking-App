@@ -8,7 +8,7 @@ import HomeCategories from "../components/HomeCategories";
 const HomeScreen = () => {
     return (
         <View style={styles.container}>
-            <View style={styles.mapStyle}>
+            <View style={styles.homeMapStyle}>
                 <HomeMap latitudeDelta={0.0122} longitudeDelta={0.0021} />
             </View>
             <View style={styles.imageContainer}>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "white"
     },
-    mapStyle: {
+    homeMapStyle: {
         height: Dimensions.get("window").height - 538
     },
     imageContainer: {

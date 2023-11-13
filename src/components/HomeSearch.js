@@ -9,26 +9,25 @@ const HomeSearch = () => {
     const navigation = useNavigation();
     return (
         <View>
-            <TouchableOpacity style={styles.searchContainer}
-                onPress={() => navigation.navigate("Search", { showRide: false })}>
-                <Text style={styles.searchText}>Where to?</Text>
+            <TouchableOpacity style={styles.searchContainer} onPress={() => navigation.navigate("Search", { showRide: false })}>
+                <Text style={styles.searchTextStyle}>Where to?</Text>
                 <View style={styles.searchIconContainer}>
                     <AntDesign name={"clockcircle"} size={16} color="#535353" />
                     <Text>Now</Text>
                     <MaterialIcons name={"keyboard-arrow-down"} size={16} />
                 </View>
             </TouchableOpacity>
-            <View style={[styles.locationRow, { borderBottomWidth: 1, borderBottomColor: "#dbdbdb" }]}>
+            <View style={[styles.locationRowStyle, { borderBottomWidth: 1, borderBottomColor: "#dbdbdb" }]}>
                 <View style={styles.locationIconContainer}>
                     <AntDesign name={"clockcircle"} size={20} color="white" />
                 </View>
-                <Text style={styles.locationText}>New Delhi</Text>
+                <Text style={styles.locationTextStyle}>New Delhi</Text>
             </View>
-            <View style={styles.locationRow}>
+            <View style={styles.locationRowStyle}>
                 <View style={[styles.locationIconContainer, { backgroundColor: "#1065e9" }]}>
                     <Entypo name={"home"} size={20} color="white" />
                 </View>
-                <Text style={styles.locationText}>Home</Text>
+                <Text style={styles.locationTextStyle}>Home</Text>
             </View>
         </View>
     );
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         backgroundColor: "#eee"
     },
-    searchText: {
+    searchTextStyle: {
         fontSize: 20,
         fontWeight: "600",
         color: "#111"
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         borderRadius: 50
     },
-    locationRow: {
+    locationRowStyle: {
         padding: 20,
         flexDirection: "row",
         alignItems: "center"
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#b3b3b3",
         borderRadius: 25
     },
-    locationText: {
+    locationTextStyle: {
         marginLeft: 10,
         fontSize: 16,
         fontWeight: "500"

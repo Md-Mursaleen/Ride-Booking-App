@@ -4,9 +4,9 @@ import { StyleSheet, Text, View } from "react-native";
 const HomeMessage = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.titleStyle}>Travel only if neccessary</Text>
-            <Text style={styles.descriptionStyle}>Help flatten the curve.If you must travel, please exercise caution for your safety and the safety of our community.</Text>
-            <Text style={styles.linkStyle}>Learn more</Text>
+            <Text style={styles.titleTextStyle}>Travel only if neccessary</Text>
+            <Text style={styles.descriptionTextStyle}>Help flatten the curve.If you must travel, please exercise caution for your safety and the safety of our community.</Text>
+            <Text style={styles.linkTextStyle}>Learn more</Text>
         </View>
     );
 }
@@ -20,18 +20,18 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10
     },
-    titleStyle: {
+    titleTextStyle: {
         marginBottom: 10,
         fontSize: 20,
         fontWeight: "bold",
         color: "white"
     },
-    descriptionStyle: {
+    descriptionTextStyle: {
         marginBottom: 10,
         fontSize: 15,
         color: "#bed9ff"
     },
-    linkStyle: {
+    linkTextStyle: {
         fontSize: 15,
         fontWeight: "bold",
         color: "white",

@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { useSelector } from "react-redux";
 import { selectTravelTimeInformation } from "../../slices/navSlice";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const RideRow = ({ type, isSelected, onPress }) => {
     const travelTimeInformation = useSelector(selectTravelTimeInformation);
@@ -16,21 +16,17 @@ const RideRow = ({ type, isSelected, onPress }) => {
         UberMoto: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_956,h_637/v1649231091/assets/2c/7fa194-c954-49b2-9c6d-a3b8601370f5/original/Uber_Moto_Orange_312x208_pixels_Mobile.png"
     };
     return (
-        <TouchableOpacity key={type.id} style={[styles.container, {
-            backgroundColor: isSelected ? "#eee" : "white"
-        }]}
-            onPress={onPress}>
+        <TouchableOpacity key={type.id} style={[styles.container, { backgroundColor: isSelected ? "#eee" : "white" }]} onPress={onPress}>
             <Image source={{ uri: cars[type.type] }} style={{ marginLeft: type.marginLeft, marginRight: type.marginRight, height: type.height, width: type.width, resizeMode: "contain" }} />
             <View style={{ marginLeft: 35 }}>
-                <Text style={styles.titleText}>
-                    {type.title}{" "}
+                <Text style={styles.titleTextStyle}>{type.title}{" "}
                     <Ionicons name="person" size={12.5} /><Text style={{ fontSize: 14.5 }}>{type.capacity}</Text>
                 </Text>
-                <Text style={{ fontSize: 14, color: "#5d5d5d" }}>{travelTimeInformation?.duration?.text} total time</Text>
+                <Text style={{ color: "#5d5d5d" }}>{travelTimeInformation?.duration?.text} total time</Text>
             </View>
             <View style={styles.priceContainer}>
                 <Ionicons name="pricetag" size={18} color="green" style={{ marginRight: 3 }} />
-                <Text style={styles.priceText}>${(travelTimeInformation?.duration?.value * type.multiplier * SURGE_CHARGE_RATE / 100).toFixed(2)}</Text>
+                <Text style={styles.priceTextStyle}>${(travelTimeInformation?.duration?.value * type.multiplier * SURGE_CHARGE_RATE / 100).toFixed(2)}</Text>
             </View>
         </TouchableOpacity>
     );
@@ -44,7 +40,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center"
     },
-    titleText: {
+    titleTextStyle: {
         marginBottom: 5,
         fontSize: 18.5,
         fontWeight: "500"
@@ -56,7 +52,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "flex-end"
     },
-    priceText: {
+    priceTextStyle: {
         marginLeft: 5,
         fontSize: 16,
         fontWeight: "bold"

@@ -47,9 +47,8 @@ const LoginScreen = () => {
                 <Image source={{ uri: "https://i.ibb.co/ZMhy8ws/uber-logo.png" }} style={styles.logoStyle} />
                 <Text style={styles.textStyle}>Login in to access your account</Text>
                 <Image source={{ uri: "https://i.ibb.co/CsV9RYZ/login-image.png" }} style={styles.imageStyle} />
-                <TouchableOpacity style={styles.buttonContainer}
-                    onPress={() => signInWithGoogle()}>
-                    <Text style={styles.buttonText}>Sign in with Google</Text>
+                <TouchableOpacity style={styles.buttonContainer} onPress={() => signInWithGoogle()}>
+                    <Text style={styles.buttonTextStyle}>Sign in with Google</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: "black"
     },
-    buttonText: {
+    buttonTextStyle: {
         fontSize: 16,
         fontWeight: "500",
         color: "white"

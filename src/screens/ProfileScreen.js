@@ -20,10 +20,9 @@ const ProfileScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <Text style={styles.headerText}>{signedUser?.user?.displayName}</Text>
+                <Text style={styles.headerTextStyle}>{signedUser?.user?.displayName}</Text>
                 <View style={[styles.headerIconContainer, !signedUser && { backgroundColor: "#eee" }]}>
-                    <Pressable style={[styles.headerIconStyle, !signedUser && { backgroundColor: "#f6f6f6", justifyContent: "center" }]}
-                        onPress={() => navigation.navigate("ProfileSetting")}>
+                    <Pressable style={[styles.headerIconStyle, !signedUser && { backgroundColor: "#f6f6f6", justifyContent: "center" }]} onPress={() => navigation.navigate("ProfileSetting")}>
                         {signedUser ? (
                             <Image source={{ uri: signedUser?.user?.photoURL }} style={styles.imageStyle} />
                         ) : (
@@ -33,19 +32,18 @@ const ProfileScreen = () => {
                 </View>
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={styles.iconRow}>
+                <View style={styles.iconRowStyle}>
                     <View style={[styles.iconContainer, { marginLeft: 15 }]}>
                         <Entypo name="mail" size={30} />
-                        <Text style={styles.iconText}>Message</Text>
+                        <Text style={styles.iconTextStyle}>Message</Text>
                     </View>
                     <View style={styles.iconContainer}>
                         <Ionicons name="md-wallet-sharp" size={30} />
-                        <Text style={styles.iconText}>Wallet</Text>
+                        <Text style={styles.iconTextStyle}>Wallet</Text>
                     </View>
-                    <Pressable style={[styles.iconContainer, { marginRight: 15 }]}
-                        onPress={() => navigation.navigate("Trips")}>
+                    <Pressable style={[styles.iconContainer, { marginRight: 15 }]} onPress={() => navigation.navigate("Trips")}>
                         <MaterialCommunityIcons name="clock-time-three" size={30} />
-                        <Text style={styles.iconText}>Trips</Text>
+                        <Text style={styles.iconTextStyle}>Trips</Text>
                     </Pressable>
                 </View>
                 <View style={styles.detailsContainer}>
@@ -69,7 +67,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between"
     },
-    headerText: {
+    headerTextStyle: {
         marginLeft: 20,
         fontSize: 34,
         fontWeight: "600"
@@ -93,7 +91,7 @@ const styles = StyleSheet.create({
         height: 52,
         borderRadius: 50
     },
-    iconRow: {
+    iconRowStyle: {
         marginTop: 20,
         flexDirection: "row",
         justifyContent: "space-between"
@@ -106,7 +104,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         borderRadius: 15
     },
-    iconText: {
+    iconTextStyle: {
         marginTop: 5,
         fontSize: 15,
         fontWeight: "500"

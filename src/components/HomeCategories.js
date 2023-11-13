@@ -15,51 +15,40 @@ const HomeCategories = () => {
     const navigation = useNavigation();
     return (
         <View style={{ marginTop: 15 }}>
-            <View style={styles.topRow}>
-                <TouchableOpacity style={[styles.topRowContainer, { marginLeft: 15 }]}
-                    onPress={() => navigation.navigate("Search", { showRide: false })}>
-                    <Image source={{ uri: cars["ride"] }}
-                        style={styles.topRowImage} />
-                    <Text style={styles.topRowText}>Ride</Text>
+            <View style={styles.topRowStyle}>
+                <TouchableOpacity style={[styles.topRowContainer, { marginLeft: 15 }]} onPress={() => navigation.navigate("Search", { showRide: false })}>
+                    <Image source={{ uri: cars["ride"] }} style={styles.topRowImageStyle} />
+                    <Text style={styles.topRowTextStyle}>Ride</Text>
                 </TouchableOpacity>
                 <View style={[styles.topRowContainer, { marginRight: 15 }]}>
-                    <Image source={{ uri: cars["shuttle"] }}
-                        style={[styles.topRowImage, { marginBottom: -13, marginTop: -5, height: 68, width: 70 }]} />
-                    <Text style={styles.topRowText}>Shuttle</Text>
+                    <Image source={{ uri: cars["shuttle"] }} style={[styles.topRowImageStyle, { marginBottom: -13, marginTop: -5, height: 68, width: 70 }]} />
+                    <Text style={styles.topRowTextStyle}>Shuttle</Text>
                 </View>
             </View>
-            <View style={styles.bottomRow}>
+            <View style={styles.bottomRowStyle}>
                 <View style={{ alignItems: "center" }}>
-                    <TouchableOpacity style={[styles.bottomRowContainer, { marginLeft: 12 }]}
-                        onPress={() => navigation.navigate("Rentals")}>
-                        <Image source={{ uri: cars["rentals"] }}
-                            style={[styles.bottomRowImage, { marginLeft: 15, marginBottom: 13, height: 57 }]} />
+                    <TouchableOpacity style={[styles.bottomRowContainer, { marginLeft: 12 }]} onPress={() => navigation.navigate("Rentals")}>
+                        <Image source={{ uri: cars["rentals"] }} style={[styles.bottomRowImageStyle, { marginLeft: 15, marginBottom: 13, height: 57 }]} />
                     </TouchableOpacity>
-                    <Text style={styles.bottomRowText}>Rentals</Text>
+                    <Text style={styles.bottomRowTextStyle}>Rentals</Text>
                 </View>
                 <View style={{ alignItems: "center" }}>
-                    <TouchableOpacity style={styles.bottomRowContainer}
-                        onPress={() => navigation.navigate("Intercity")}>
-                        <Image source={{ uri: cars["intercity"] }}
-                            style={[styles.bottomRowImage, { marginLeft: 15, marginBottom: 13, height: 57.5 }]} />
+                    <TouchableOpacity style={styles.bottomRowContainer} onPress={() => navigation.navigate("Intercity")}>
+                        <Image source={{ uri: cars["intercity"] }} style={[styles.bottomRowImageStyle, { marginLeft: 15, marginBottom: 13, height: 57.5 }]} />
                     </TouchableOpacity>
-                    <Text style={styles.bottomRowText}>Intercity</Text>
+                    <Text style={styles.bottomRowTextStyle}>Intercity</Text>
                 </View>
                 <View style={{ alignItems: "center" }}>
-                    <TouchableOpacity style={styles.bottomRowContainer}
-                        onPress={() => navigation.navigate("Bikes")}>
-                        <Image source={{ uri: cars["bikes"] }}
-                            style={[styles.bottomRowImage, { height: 68, width: 75, marginLeft: 30, marginBottom: 15 }]} />
+                    <TouchableOpacity style={styles.bottomRowContainer} onPress={() => navigation.navigate("Bikes")}>
+                        <Image source={{ uri: cars["bikes"] }} style={[styles.bottomRowImageStyle, { height: 68, width: 75, marginLeft: 30, marginBottom: 15 }]} />
                     </TouchableOpacity>
-                    <Text style={styles.bottomRowText}>Bikes</Text>
+                    <Text style={styles.bottomRowTextStyle}>Bikes</Text>
                 </View>
                 <View style={{ alignItems: "center" }}>
-                    <TouchableOpacity style={[styles.bottomRowContainer, { marginRight: 12 }]}
-                        onPress={() => navigation.navigate("Taxi")}>
-                        <Image source={{ uri: cars["taxi"] }}
-                            style={[styles.bottomRowImage, { height: 60, marginLeft: 15, marginBottom: 15 }]} />
+                    <TouchableOpacity style={[styles.bottomRowContainer, { marginRight: 12 }]} onPress={() => navigation.navigate("Taxi")}>
+                        <Image source={{ uri: cars["taxi"] }} style={[styles.bottomRowImageStyle, { height: 60, marginLeft: 15, marginBottom: 15 }]} />
                     </TouchableOpacity>
-                    <Text style={styles.bottomRowText}>Taxi</Text>
+                    <Text style={styles.bottomRowTextStyle}>Taxi</Text>
                 </View>
             </View>
         </View>
@@ -69,7 +58,7 @@ const HomeCategories = () => {
 export default HomeCategories;
 
 const styles = StyleSheet.create({
-    topRow: {
+    topRowStyle: {
         flexDirection: "row",
         justifyContent: "space-between"
     },
@@ -81,18 +70,18 @@ const styles = StyleSheet.create({
         backgroundColor: "#f2f2f2",
         borderRadius: 10
     },
-    topRowImage: {
+    topRowImageStyle: {
         marginLeft: "auto",
         width: 68,
         height: 48
     },
-    topRowText: {
+    topRowTextStyle: {
         marginLeft: 5,
         marginTop: 5,
         fontSize: 16,
         fontWeight: "500"
     },
-    bottomRow: {
+    bottomRowStyle: {
         flexDirection: "row",
         justifyContent: "space-between"
     },
@@ -106,11 +95,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         borderRadius: 10
     },
-    bottomRowImage: {
+    bottomRowImageStyle: {
         width: 68,
         height: 50
     },
-    bottomRowText: {
+    bottomRowTextStyle: {
         marginTop: 5,
         fontSize: 12.5,
         fontWeight: "500"

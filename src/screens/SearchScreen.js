@@ -63,31 +63,28 @@ const SearchScreen = ({ route }) => {
         <View style={styles.container}>
             {showRide && (
                 <View style={styles.rideHeaderContainer}>
-                    <Ionicons name="arrow-back-sharp" size={30} color="black" style={{ marginLeft: 15 }}
-                        onPress={() => navigation.goBack()} />
-                    <Text style={styles.rideHeaderText}>Plan your ride</Text>
+                    <Ionicons name="arrow-back-sharp" size={30} color="black" style={{ marginLeft: 15 }} onPress={() => navigation.goBack()} />
+                    <Text style={styles.rideHeaderTextStyle}>Plan your ride</Text>
                 </View>
             )}
             {!showRide && (
                 <View style={styles.userHeaderContainer}>
-                    <Ionicons name="arrow-back-sharp" size={30} color="black" style={{ marginLeft: 15 }}
-                        onPress={() => navigation.goBack()} />
+                    <Ionicons name="arrow-back-sharp" size={30} color="black" style={{ marginLeft: 15 }} onPress={() => navigation.goBack()} />
                     <View style={styles.userHeaderSubContainer}>
                         <View style={styles.iconContainer}>
                             <Pressable style={styles.iconStyle}>
                                 <Entypo name="user" size={17} color="#cdcdcd" />
                             </Pressable>
                         </View>
-                        <Text style={styles.userHeaderSubContainerText}>Select Rider</Text>
+                        <Text style={styles.userHeaderSubContainerTextStyle}>Select Rider</Text>
                         <Entypo name="chevron-small-down" size={20} color="black" style={{ marginLeft: 3 }} />
                     </View>
                 </View>
             )}
             <View style={[showRide ? { marginTop: 5 } : { marginTop: -13 }]}>
-                <GooglePlacesAutocomplete
-                    onPress={(data, details = null) => {
-                        setOrigin({ data, details });
-                    }}
+                <GooglePlacesAutocomplete onPress={(data, details = null) => {
+                    setOrigin({ data, details });
+                }}
                     placeholder="Where from?"
                     fetchDetails
                     query={{
@@ -124,10 +121,9 @@ const SearchScreen = ({ route }) => {
                     currentLocationLabel="Current Location"
                     renderDescription={(data) => data.description || data.vicinity}
                     predefinedPlaces={[home, work]} />
-                <GooglePlacesAutocomplete
-                    onPress={(data, details = null) => {
-                        setDestination({ data, details });
-                    }}
+                <GooglePlacesAutocomplete onPress={(data, details = null) => {
+                    setDestination({ data, details });
+                }}
                     placeholder="Where to?"
                     fetchDetails
                     query={{
@@ -182,7 +178,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center"
     },
-    rideHeaderText: {
+    rideHeaderTextStyle: {
         marginLeft: "25%",
         fontSize: 17.5,
         fontWeight: "500"
@@ -216,7 +212,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#f6f6f6",
         borderRadius: 50
     },
-    userHeaderSubContainerText: {
+    userHeaderSubContainerTextStyle: {
         marginLeft: 10,
         fontSize: 14.5,
         fontWeight: "500"

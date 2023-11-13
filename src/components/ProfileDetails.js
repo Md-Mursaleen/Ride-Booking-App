@@ -12,37 +12,37 @@ const ProfileDetails = () => {
         <View>
             <View style={[styles.itemContainer, { marginTop: 15 }]}>
                 <Foundation name="shopping-bag" size={20} />
-                <Text style={styles.itemText}>Business hub</Text>
+                <Text style={styles.itemTextStyle}>Business hub</Text>
             </View>
             <View style={styles.itemContainer}>
                 <Ionicons name="md-gift-sharp" size={20} />
-                <Text style={styles.itemText}>Send a gift</Text>
+                <Text style={styles.itemTextStyle}>Send a gift</Text>
             </View>
             <View style={styles.itemContainer}>
                 <Ionicons name="md-help-buoy-sharp" size={20} />
-                <Text style={styles.itemText}>Help</Text>
+                <Text style={styles.itemTextStyle}>Help</Text>
             </View>
             <View style={styles.itemContainer}>
                 <FontAwesome5 name="route" size={20} />
-                <Text style={styles.itemText}>Shuttle Routes</Text>
+                <Text style={styles.itemTextStyle}>Shuttle Routes</Text>
             </View>
             <View style={styles.itemContainer}>
                 <MaterialCommunityIcons name="shield-check" size={20} />
-                <Text style={styles.itemText}>COVID-19 Safety Center</Text>
+                <Text style={styles.itemTextStyle}>COVID-19 Safety Center</Text>
             </View>
             <View style={styles.itemContainer}>
                 <MaterialIcons name="settings" size={20} />
-                <Text style={styles.itemText}>Settings</Text>
+                <Text style={styles.itemTextStyle}>Settings</Text>
             </View>
             <View style={styles.itemContainer}>
                 <FontAwesome5 name="shopping-bag" size={18} />
-                <Text style={styles.itemText}>Earn by driving or delivering</Text>
+                <Text style={styles.itemTextStyle}>Earn by driving or delivering</Text>
             </View>
             <View style={styles.itemContainer}>
                 <AntDesign name="exclamationcircle" size={18} />
-                <Text style={styles.itemText}>Legal</Text>
+                <Text style={styles.itemTextStyle}>Legal</Text>
             </View>
-            <Text style={styles.versionText}>v4.470.10004</Text>
+            <Text style={styles.versionTextStyle}>v4.470.10004</Text>
         </View>
     );
 }
@@ -56,12 +56,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center"
     },
-    itemText: {
+    itemTextStyle: {
         marginLeft: 20,
         fontSize: 16,
         fontWeight: "500"
     },
-    versionText: {
+    versionTextStyle: {
         marginLeft: 20,
         marginBottom: 15,
         marginTop: 30,

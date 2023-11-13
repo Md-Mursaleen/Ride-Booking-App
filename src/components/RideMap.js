@@ -26,12 +26,11 @@ const RideMap = ({ origin, destination, rentals }) => {
         useEffect(() => {
             if (!origin || !destination) return;
             const getTravelTime = async () => {
-                fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.data.description}&destinations=${destination.data.description}&key=${GOOGLE_MAPS_APIKEY}`)
-                    .then((res) => res.json()).then((data) => {
-                        dispatch(setTravelTimeInformation(
-                            data.rows[0].elements[0]
-                        ));
-                    });
+                fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.data.description}&destinations=${destination.data.description}&key=${GOOGLE_MAPS_APIKEY}`).then((res) => res.json()).then((data) => {
+                    dispatch(setTravelTimeInformation(
+                        data.rows[0].elements[0]
+                    ));
+                });
             };
             getTravelTime();
         }, [origin, destination, GOOGLE_MAPS_APIKEY]);
@@ -66,8 +65,7 @@ const RideMap = ({ origin, destination, rentals }) => {
                                 }
                             ]
                         }
-                    ]}
-                    style={styles.mapViewStyle}>
+                    ]} style={styles.mapViewStyle}>
                     <MapViewDirections origin={origin.data.description}
                         destination={destination.data.description}
                         apikey={GOOGLE_MAPS_APIKEY}
@@ -90,14 +88,12 @@ const RideMap = ({ origin, destination, rentals }) => {
                 <MapView style={styles.mapViewStyle}
                     showsUserLocation={true}
                     provider={PROVIDER_GOOGLE}
-                    initialRegion={
-                        {
-                            latitude: origin.lat,
-                            longitude: origin.lng,
-                            latitudeDelta: 0.0222,
-                            longitudeDelta: 0.0121
-                        }
-                    }>
+                    initialRegion={{
+                        latitude: origin.lat,
+                        longitude: origin.lng,
+                        latitudeDelta: 0.0222,
+                        longitudeDelta: 0.0121
+                    }}>
                     <Marker draggable coordinate={{
                         latitude: origin.lat,
                         longitude: origin.lng

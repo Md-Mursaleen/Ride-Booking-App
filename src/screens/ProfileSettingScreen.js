@@ -28,26 +28,26 @@ const ProfileSettingScreen = () => {
                 <Pressable style={{ marginLeft: 15 }} onPress={() => navigation.goBack()}>
                     <Feather name="arrow-left" size={23} />
                 </Pressable>
-                <Text style={styles.settingText}>Settings</Text>
+                <Text style={styles.settingTextStyle}>Settings</Text>
                 <View style={styles.iconContainer}>
                     <Pressable style={styles.iconStyle}>
                         <Entypo name="user" size={30} color="#cdcdcd" />
                     </Pressable>
                 </View>
                 <View style={{ marginTop: 10 }}>
-                    <Text style={styles.userText}>{signedUser?.user?.displayName}</Text>
-                    <Text style={styles.accountText}>EDIT ACCOUNT</Text>
+                    <Text style={styles.userTextStyle}>{signedUser?.user?.displayName}</Text>
+                    <Text style={styles.accountTextStyle}>EDIT ACCOUNT</Text>
                 </View>
                 <View style={styles.middleContainer}>
-                    <Text style={[styles.headerText, { marginTop: 20 }]}>Saved Places</Text>
+                    <Text style={[styles.headerTextStyle, { marginTop: 20 }]}>Saved Places</Text>
                     <View style={{ marginTop: 20 }}>
                         <View style={styles.middleSubContainer}>
                             <View>
                                 <Octicons name="home" size={21} />
                             </View>
                             <View style={{ marginLeft: 20 }}>
-                                <Text style={styles.middleText}>Home</Text>
-                                <Text style={styles.middleSubText}>Add Home</Text>
+                                <Text style={styles.middleTextStyle}>Home</Text>
+                                <Text style={styles.middleSubTextStyle}>Add Home</Text>
                             </View>
                         </View>
                         <View style={[styles.middleSubContainer, { marginTop: 30 }]}>
@@ -55,17 +55,17 @@ const ProfileSettingScreen = () => {
                                 <MaterialIcons name="work-outline" size={23} />
                             </View>
                             <View style={{ marginLeft: 20 }}>
-                                <Text style={styles.middleText}>Work</Text>
-                                <Text style={styles.middleSubText}>Add Work</Text>
+                                <Text style={styles.middleTextStyle}>Work</Text>
+                                <Text style={styles.middleSubTextStyle}>Add Work</Text>
                             </View>
                         </View>
                     </View>
                 </View>
                 <View style={styles.bottomContainer}>
                     <View style={styles.bottomSubContainer}>
-                        <Text style={styles.headerText}>Other Options</Text>
+                        <Text style={styles.headerTextStyle}>Other Options</Text>
                         <Pressable onPress={() => signOutWithGoogle()}>
-                            <Text style={styles.bottomText}>Sign Out</Text>
+                            <Text style={styles.bottomTextStyle}>Sign Out</Text>
                         </Pressable>
                     </View>
                 </View>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "white"
     },
-    settingText: {
+    settingTextStyle: {
         marginLeft: 15,
         fontSize: 38,
         fontWeight: "500"
@@ -104,12 +104,12 @@ const styles = StyleSheet.create({
         backgroundColor: "#f6f6f6",
         borderRadius: 50
     },
-    userText: {
+    userTextStyle: {
         fontSize: 18,
         fontWeight: "500",
         textAlign: "center"
     },
-    accountText: {
+    accountTextStyle: {
         marginTop: 10,
         fontSize: 15,
         fontWeight: "500",
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         borderTopColor: "#f4f4f4",
         borderTopWidth: 1
     },
-    headerText: {
+    headerTextStyle: {
         fontSize: 20,
         fontWeight: "500"
     },
@@ -130,11 +130,11 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center"
     },
-    middleText: {
+    middleTextStyle: {
         fontSize: 15,
         fontWeight: "500"
     },
-    middleSubText: {
+    middleSubTextStyle: {
         marginTop: 15,
         fontSize: 13,
         color: "#626262"
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         marginLeft: 15
     },
-    bottomText: {
+    bottomTextStyle: {
         marginTop: 25,
         fontSize: 18,
         fontWeight: "500",

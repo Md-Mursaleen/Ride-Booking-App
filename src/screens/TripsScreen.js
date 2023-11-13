@@ -19,11 +19,11 @@ const TripsScreen = () => {
     return (
         <View style={styles.container}>
             <Ionicons name="arrow-back" size={28} color="#282828" style={styles.iconStyle} onPress={() => navigation.goBack()} />
-            <Text style={styles.titleStyle}>Choose a trip</Text>
+            <Text style={styles.titleTextStyle}>Choose a trip</Text>
             <View style={styles.notripContainer}>
-                <Text style={styles.noTripText}>You haven't taken a trip yet</Text>
+                <Text style={styles.noTripTextStyle}>You haven't taken a trip yet</Text>
                 <TouchableOpacity style={styles.retryContainer}>
-                    <Text style={styles.retryText}>RETRY</Text>
+                    <Text style={styles.retryTextStyle}>RETRY</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         marginTop: 50
     },
-    titleStyle: {
+    titleTextStyle: {
         marginLeft: 15,
         fontSize: 33.5,
         fontWeight: "500",
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         marginTop: 330,
         alignItems: "center"
     },
-    noTripText: {
+    noTripTextStyle: {
         fontSize: 18.5,
         color: "#313131"
     },
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         borderColor: "#313131",
         borderRadius: 3
     },
-    retryText: {
+    retryTextStyle: {
         fontSize: 17,
         fontWeight: "500"
     }

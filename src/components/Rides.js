@@ -20,18 +20,17 @@ const Rides = ({ typeState, onSubmit, rentals }) => {
                     <ScrollView>
                         <View style={styles.headerContainer}>
                             <Ionicons name="arrow-back-sharp" size={26} color="black" style={{ marginLeft: 15 }} onPress={() => navigation.goBack()} />
-                            <Text style={styles.headerText}>Select a Ride - {travelTimeInformation?.distance.text}</Text>
+                            <Text style={styles.headerTextStyle}>Select a Ride - {travelTimeInformation?.distance.text}</Text>
                         </View>
                         {types.map((type) => (
-                            <RideRow key={type.id} type={type} isSelected={type.type === selectedType}
-                                onPress={() => setSelectedType(type.type)}
+                            <RideRow key={type.id} type={type} isSelected={type.type === selectedType} onPress={() => setSelectedType(type.type)}
                             />))}
                     </ScrollView>
                     <TouchableOpacity style={[styles.buttonContainer, selectedType === "" && { opacity: 0.7 }]} onPress={onSubmit}>
                         {selectedType !== "" ? (
-                            <Text style={styles.buttonText}>Confirm {selectedType}</Text>
+                            <Text style={styles.buttonTextStyle}>Confirm {selectedType}</Text>
                         ) : (
-                            <Text style={styles.buttonText}>Select a Ride</Text>
+                            <Text style={styles.buttonTextStyle}>Select a Ride</Text>
                         )}
                     </TouchableOpacity>
                 </>
@@ -40,18 +39,17 @@ const Rides = ({ typeState, onSubmit, rentals }) => {
                     <ScrollView>
                         <View style={styles.headerContainer}>
                             <Ionicons name="arrow-back-sharp" size={26} color="black" style={{ marginLeft: 15 }} onPress={() => navigation.goBack()} />
-                            <Text style={[styles.headerText, { marginLeft: 100 }]}>Select a Rental</Text>
+                            <Text style={[styles.headerTextStyle, { marginLeft: 100 }]}>Select a Rental</Text>
                         </View>
                         {rentaltypes.map((type) => (
-                            <RentalRideRow key={type.id} type={type} isSelected={type.type === selectedType}
-                                onPress={() => setSelectedType(type.type)}
+                            <RentalRideRow key={type.id} type={type} isSelected={type.type === selectedType} onPress={() => setSelectedType(type.type)}
                             />))}
                     </ScrollView>
                     <TouchableOpacity style={[styles.buttonContainer, selectedType === "" && { opacity: 0.5 }]} onPress={onSubmit}>
                         {selectedType !== "" ? (
-                            <Text style={styles.buttonText}>Confirm {selectedType}</Text>
+                            <Text style={styles.buttonTextStyle}>Confirm {selectedType}</Text>
                         ) : (
-                            <Text style={styles.buttonText}>Select a Rental</Text>
+                            <Text style={styles.buttonTextStyle}>Select a Rental</Text>
                         )}
                     </TouchableOpacity>
                 </>
@@ -69,7 +67,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center"
     },
-    headerText: {
+    headerTextStyle: {
         marginLeft: 75,
         fontSize: 17.5,
         fontWeight: "500"
@@ -80,7 +78,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "black"
     },
-    buttonText: {
+    buttonTextStyle: {
         fontSize: 17,
         fontWeight: "bold",
         color: "white"

@@ -9,10 +9,9 @@ const GettingStartedScreen = () => {
         <View style={styles.container}>
             <Image source={{ uri: "https://i.ibb.co/ZMhy8ws/uber-logo.png" }} style={styles.logoStyle} />
             <Image source={require("../../assets/images/start-image.png")} style={styles.imageStyle} />
-            <Text style={styles.subTitleText}>Move with Safety</Text>
-            <TouchableOpacity style={styles.buttonContainer}
-                onPress={() => navigation.navigate("Login")}>
-                <Text style={styles.buttonText}>Get Started</Text>
+            <Text style={styles.subTitleTextStyle}>Move with Safety</Text>
+            <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("Login")}>
+                <Text style={styles.buttonTextStyle}>Get Started</Text>
                 <MaterialCommunityIcons name="arrow-right" size={30} color="white" style={styles.iconStyle} />
             </TouchableOpacity>
         </View>
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
         width: "100%",
         alignSelf: "center"
     },
-    subTitleText: {
+    subTitleTextStyle: {
         marginTop: 25,
         fontSize: 36,
         fontWeight: "bold",
@@ -55,7 +54,7 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         backgroundColor: "black"
     },
-    buttonText: {
+    buttonTextStyle: {
         marginLeft: 145,
         fontSize: 18,
         fontWeight: "500",
