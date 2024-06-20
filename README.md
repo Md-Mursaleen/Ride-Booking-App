@@ -40,3 +40,26 @@ Ride Booking App is a cross-platform mobile application designed to provide user
 5. **Start the application**:
    ```bash
    npm start
+
+## Usage
+
+1. **Sign Up / Login**: Create an account or log in.
+2. **Book a Ride**: Enter pickup and drop-off locations.
+3. **Track Your Ride**: Follow your ride in real-time.
+4. **Manage Profile**: Update profile information and view ride history.
+
+## Contributing
+
+Contributions are welcome! Follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-branch
+3. Make changes and commit them:
+   ```bash
+   git commit -m 'Add feature'
+4. Push to the branch:
+   ```bash
+   git push origin feature-branch
+5. Open a Pull Request.   
