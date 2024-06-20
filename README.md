@@ -36,5 +36,7 @@ Ride Booking App is a cross-platform mobile application designed to provide user
 4. **Set up Firebase**:
    Create a new Firebase project.
    Add your Firebase configuration to firebaseConfig.js.
-   
 
+5. **Start the application**:
+   ```bash
+   npm start
