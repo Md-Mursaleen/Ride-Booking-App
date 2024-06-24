@@ -58,4 +58,4 @@ Contributions are welcome! Follow these steps:
 4. Push to the branch:
    ```bash
    git push origin feature-branch
-5. Open a Pull Request.   
+5. Open a pull request.   
